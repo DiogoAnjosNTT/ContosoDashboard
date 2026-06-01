@@ -92,6 +92,16 @@ ContosoDashboard is built using ASP.NET Core 8.0 with Blazor Server and provides
 
 ## Architecture Principles
 
+## Development Governance
+
+Feature work in this repository is governed by `.specify/memory/constitution.md`.
+That constitution requires training-first scope, offline-first defaults,
+authorization at UI and service boundaries, slice-based validation, and simple
+implementations that preserve the documented cloud migration path.
+
+When using the GitHub Spec Kit workflow, keep specifications, plans, and tasks
+aligned with those rules before implementation begins.
+
 ### Offline-First with Cloud Migration Path
 
 This training application follows an **offline-first architecture** with abstraction layers that enable seamless migration to Azure services:

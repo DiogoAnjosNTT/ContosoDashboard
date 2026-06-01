@@ -72,8 +72,10 @@
   Fill them out with the right edge cases.
 -->
 
-- What happens when [boundary condition]?
-- How does system handle [error scenario]?
+- What happens when a user loses connectivity, local resources are unavailable,
+  or an offline-first dependency is not initialized?
+- How does the system prevent unauthorized access, over-broad data exposure, or
+  IDOR-style access to records outside the actor's scope?
 
 ## Requirements *(mandatory)*
 
@@ -89,6 +91,15 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+
+### Operational Constraints
+
+- Document any local-only, offline-first, or training-only assumptions that the
+  feature depends on.
+- Identify any route, role, service, or data-access boundary that requires
+  authorization enforcement.
+- Call out any new abstraction needed to preserve the project's cloud migration
+  path while keeping the default implementation local.
 
 *Example of marking unclear requirements:*
 

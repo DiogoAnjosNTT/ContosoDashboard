@@ -31,7 +31,17 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Training-first scope preserved: explain how the feature stays appropriate for
+  local training, and document any intentional simplifications.
+- Offline-first design preserved: confirm the default path works locally without
+  external services, or justify the scope change explicitly.
+- Access-control boundaries identified: list affected roles, protected routes,
+  service-layer checks, and data-isolation rules.
+- Validation strategy defined: name the focused automated tests and/or manual
+  verification steps for each user slice, with special coverage for security or
+  authorization changes.
+- Simplicity justified: record any new abstraction, dependency, or architectural
+  layer that exceeds the simplest viable implementation.
 
 ## Project Structure
 
